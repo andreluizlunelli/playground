@@ -1,22 +1,11 @@
 ## Purpose of this repo
 
-_An overview of how properly consume APIs in Laravel_
-
-Since consume APIs with Laravel is not trivial, this repo aims to provide an overview of best practices that I've been using. 
+_A place to try out code_
 
 ## Topics
 
-- [Batch Pagination Example](./app/Modules/Jikan/Jobs/TopAnime.php)
-  - Cookbook
-    - [Endpoints](./app/Modules/Jikan/Endpoints)
-    - [Service](./app/Modules/Jikan/JikanService)
-    - [Facade](./app/Modules/Jikan/JikanFacade)
-    - [Jobs/Batch](./app/Modules/Jikan/Jobs)
-    - [Command](#)
-
-## Resources
-
-- [https://jikan.moe/](https://jikan.moe)
+- [Trees]
+  - [Binary](./tests/Unit/Modules/Trees/Binary/BinaryTreeTest.php)
 
 ## License
 
