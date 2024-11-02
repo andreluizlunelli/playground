@@ -40,4 +40,24 @@ class Tree
 
         return $parentNode;
     }
+
+    public function inOrderTraversal(): array
+    {
+        $valuesInOrder = [];
+
+        $this->inOrderWalk($this->root, $valuesInOrder);
+
+        return $valuesInOrder;
+    }
+
+    private function inOrderWalk(?Node $currentNode, array &$valuesInOrder): void
+    {
+        if ($currentNode === null) {
+            return;
+        }
+
+        $this->inOrderWalk($currentNode->left, $valuesInOrder);
+        $valuesInOrder[] = $currentNode->value;
+        $this->inOrderWalk($currentNode->right, $valuesInOrder);
+    }
 }
