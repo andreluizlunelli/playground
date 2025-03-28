@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('popularity')->nullable();
             $table->dateTimeTz('aired_from')->nullable();
             $table->dateTimeTz('aired_to')->nullable();
+            $table->mediumInteger('aired_year')->nullable();
             $table->text('synopsis')->nullable();
             $table->timestamps();
         });
