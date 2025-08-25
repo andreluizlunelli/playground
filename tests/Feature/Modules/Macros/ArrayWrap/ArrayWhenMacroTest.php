@@ -7,8 +7,9 @@ use Illuminate\Support\Arr;
 
 use function PHPUnit\Framework\assertSame;
 
+beforeEach(fn () => ArrayWhen::enableMacro());
+
 test('it can evaluate cases by conditional', function (array $given, array $expected) {
-    Arr::macro('when', new ArrayWhen()->macro());
     $returned = Arr::when($given);
     assertSame($expected, $returned);
 })->with([
@@ -83,4 +84,3 @@ test('it can evaluate cases by conditional', function (array $given, array $expe
         ],
     ],
 ]);
-

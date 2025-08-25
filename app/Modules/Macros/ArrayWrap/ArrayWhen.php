@@ -6,11 +6,17 @@ namespace App\Modules\Macros\ArrayWrap;
 
 use Closure;
 use Illuminate\Http\Resources\ConditionallyLoadsAttributes;
+use Illuminate\Support\Arr;
 use ReflectionFunction;
 
 class ArrayWhen
 {
     use ConditionallyLoadsAttributes;
+
+    public static function enableMacro(): void
+    {
+        Arr::macro('when', app(self::class)->macro());
+    }
 
     public function macro(): callable
     {
