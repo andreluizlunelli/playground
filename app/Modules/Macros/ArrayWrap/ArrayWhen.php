@@ -22,6 +22,8 @@ class ArrayWhen
     {
         $supportedMethods = [
             'when'        => $this->when(...),
+            'merge'       => $this->merge(...),
+            'unless'      => $this->unless(...),
             'mergeWhen'   => $this->mergeWhen(...),
             'mergeUnless' => $this->mergeUnless(...),
         ];

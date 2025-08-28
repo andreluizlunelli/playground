@@ -63,6 +63,14 @@ test('it can evaluate cases by conditional', function (array $given, array $expe
         ],
         ['delete' => 'none'],
     ],
+    'merge' => [
+        [fn ($merge) => $merge(['view' => 'all', 'delete' => 'none'])],
+        ['view' => 'all', 'delete' => 'none'],
+    ],
+    'unless' => [
+        ['is_admin' => fn ($unless) => $unless($isAdmin = false, ['deny' => 'all'])],
+        ['is_admin' => ['deny' => 'all']],
+    ],
     'mixed raw, when and mergeWhen' => [
         [
             'name'          => 'John Doe',
