@@ -10,7 +10,7 @@ beforeEach(fn () => ArrayWhen::enableMacro());
 
 uses(RefreshDatabaseAlias::class);
 
-test('you can use for manage a navigation menu links', function () {
+test('you can use it for manage a navigation menu links', function () {
     $guest = User::factory()->create(['email' => 'guest@gmail.com']);
 
     actingAs($guest);
@@ -23,7 +23,7 @@ test('you can use for manage a navigation menu links', function () {
     assertSame(['index' => 'home'], $routes);
 });
 
-test('you can use for adding many links at once', function () {
+test('you can use it for adding many links at once', function () {
     $admin = User::factory()->create(['email' => 'admin@gmail.com']);
 
     actingAs($admin);

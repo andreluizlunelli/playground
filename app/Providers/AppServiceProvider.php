@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Modules\Macros\ArrayWrap\ArrayWhen;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
@@ -13,5 +14,7 @@ class AppServiceProvider extends ServiceProvider
         RateLimiter::for('jikan', function () {
             return Limit::perSecond(3);
         });
+
+        ArrayWhen::enableMacro();
     }
 }
