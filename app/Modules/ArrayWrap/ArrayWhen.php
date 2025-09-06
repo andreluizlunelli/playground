@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Modules\Macros\ArrayWrap;
+namespace App\Modules\ArrayWrap;
 
 use Closure;
 use Illuminate\Http\Resources\ConditionallyLoadsAttributes;
